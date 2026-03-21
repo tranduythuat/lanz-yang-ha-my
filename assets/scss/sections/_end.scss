@@ -1,0 +1,57 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.end {
+    width: 100%;
+    .content {
+        width: 100%;
+        padding: 15% 0;
+        .image {
+            img {
+                max-width: 252px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .divider {
+            margin: 1% 0 5%;
+            img {
+                max-width: 191px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .text {
+            font-size: 16px;
+            p {
+                margin-bottom: 5%;
+            }
+        }
+        .end-text {
+            font-family: $font-BigelowRules-Regular;
+            font-size: 36px;
+            color: $title-color;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .image {
+                img {
+                    max-width: calc((252 / 500) * 100vw);
+                }
+            }
+            .divider {
+                img {
+                    max-width: calc((191 / 500) * 100vw);
+                }
+            }
+            .text {
+                font-size: calc((16 / 500) * 100vw);
+            }
+            .end-text {
+                font-size: calc((36 / 500) * 100vw);
+            }
+        }
+    }
+}

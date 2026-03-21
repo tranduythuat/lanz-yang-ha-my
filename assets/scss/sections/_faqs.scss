@@ -1,0 +1,104 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.faqs {
+    width: 100%;
+
+    .content {
+        width: 100%;
+        aspect-ratio: 500 / 500;
+        background: url('../../assets/images/base_bg.png') no-repeat center / cover;
+        color: $text-color;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+
+        .title {
+            font-size: 32px;
+            font-family: $font-PinyonScript;
+            margin-top: 10%;
+        }
+
+        .faq-container {
+            font-family: $font-gotham;
+            max-width: 480px;
+            width: 100%;
+            margin-top: 8%;
+
+            .faq-item {
+                border: 2px solid $text-color;
+                border-radius: 8px;
+                margin-bottom: 2%;
+                overflow: hidden;
+                .faq-header {
+                    width: 100%;
+                    background: transparent;
+                    font-family: inherit;
+                    color: $text-color;
+                    padding: 3% 4% 2%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 16px;
+                    cursor: pointer;
+                    border: none;
+                    .icon {
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 1;
+                    }
+                }
+
+                .faq-content {
+                    color: $text-color;
+                    height: 0;
+                    overflow: hidden;
+                    p {
+                        text-align: justify;
+                        padding: 0 4% 3%;;
+                        font-size: 12px;
+                    }
+
+                    a {
+                        display: block;
+                        font-size: 14px;
+                        color: $text-color;
+                        margin-bottom: 2%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .title {
+                font-size: calc((32 / 500) * 100vw);
+            }
+    
+            .faq-container {
+                max-width: calc((480 / 500) * 100vw);
+    
+                .faq-item {
+                    .faq-header {
+                        font-size: calc((16 / 500) * 100vw);
+                        .icon {
+                            font-size: calc((16 / 500) * 100vw);
+                        }
+                    }
+    
+                    .faq-content {
+                        p {
+                            font-size: calc((12 / 500) * 100vw);
+                        }
+
+                        a {
+                            font-size: calc((14 / 500) * 100vw);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
