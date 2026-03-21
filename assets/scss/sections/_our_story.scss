@@ -11,6 +11,7 @@
         align-items: center;
         flex-direction: column;
         padding: 10% 0;
+        perspective: 100px;
 
         .title {
             font-family: $font-BigelowRules-Regular;
@@ -20,7 +21,7 @@
 
         .divider {
             margin: 1% 0 5%;
-
+            perspective: 1000px;
             img {
                 max-width: 117px;
                 width: 100%;
@@ -125,6 +126,7 @@
                 }
 
                 .divider {
+                    perspective: 500px;
                     img {
                         max-width: 25px;
                         width: 100%;

@@ -273,7 +273,7 @@
 
     const content = section.querySelector(".timeline-content");
     const bg = section.querySelector(".cover-bg");
-    const divider = section.querySelector(".divider-flower");
+    // const divider = section.querySelector(".divider-flower");
     const title = section.querySelector(".timeline-title");
     const items = section.querySelectorAll(".timeline-item");
 
@@ -301,26 +301,26 @@
       }
     );
 
-    tl.from(
-      bg,
-      {
-        rotateY: -180,
-        scale: 0.8,
-        opacity: 0,
-        duration: 1.8,
-        ease: "back.out(1.2)",
-        transformOrigin: "center center"
-      },
-      "-=0.5"
-    );
+    // tl.from(
+    //   bg,
+    //   {
+    //     rotateY: -180,
+    //     scale: 0.8,
+    //     opacity: 0,
+    //     duration: 1.8,
+    //     ease: "back.out(1.2)",
+    //     transformOrigin: "center center"
+    //   },
+    //   "-=0.5"
+    // );
 
-    tl.from([divider, title], {
-      opacity: 0,
-      y: 40,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: "power2.out"
-    }, "-=1.5");
+    // tl.from([divider, title], {
+    //   opacity: 0,
+    //   y: 40,
+    //   duration: 0.8,
+    //   stagger: 0.15,
+    //   ease: "power2.out"
+    // }, "-=1.5");
 
     // =========================
     // Animate từng item theo thứ tự
@@ -617,6 +617,7 @@
       "flip-vertical-bottom": gsapFlipVerticalBottom,
 
       "roll-in-left": gsapRollInLeft,
+      "roll-in-right": gsapRollInRight,
       "rotate-bl--float": gsap_rotate_bl__float,
     };
 
@@ -647,11 +648,11 @@
     gsap.registerPlugin(ScrollTrigger);
     // initPage();
     // initLetterAnimation();
-    // initAnimations();
+    initAnimations();
     // initSwiper();
     initMusic();
     // initDresscodeAnimation();
-    // initTimeline();
+    initTimeline();
     initFAQ();
     initRSVP();
     // startCountdown(new Date("2026-03-06T16:00:00"));

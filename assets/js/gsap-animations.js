@@ -423,6 +423,25 @@ function gsapRollInLeft(selector) {
   });
 }
 
+function gsapRollInRight(selector) {
+  gsap.utils.toArray(selector).forEach((el) => {
+    gsap.from(el, {
+      rotation: 360,
+      scale: 0.8,
+      x: 500,
+      opacity: 0,
+      duration: 2,
+      ease: "back.out(1.2)",
+      transformOrigin: "center center",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+    });
+  });
+}
+
 function gsap_rotate_bl__float(selector) {
   gsap.utils.toArray(selector).forEach((el) => {
     gsap.from(el, {
