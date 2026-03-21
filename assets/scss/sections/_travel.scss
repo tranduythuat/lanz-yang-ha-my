@@ -47,7 +47,7 @@
                 // padding: 4% 0;
                 height: 100%;
                 line-height: 1.2;
-                border-radius: 10px;
+                border-radius: 8px;
                 background: transparent;
                 cursor: pointer;
                 transition: all 0.3s ease;
@@ -153,10 +153,6 @@
             .info-table {
                 .table-title {
                     font-size: calc((13 / 500) * 100vw);
-                }
-    
-                .table-row {
-                    padding: calc((12 / 500) * 100vw);
                 }
             }
         }

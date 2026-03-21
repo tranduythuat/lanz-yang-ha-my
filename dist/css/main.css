@@ -613,7 +613,6 @@ section {
 }
 .rsvp .content .rsvp-form .button-group .radio-wrapper {
   position: relative;
-  height: 32px;
 }
 .rsvp .content .rsvp-form .button-group .radio-wrapper input[type=radio] {
   position: absolute;
@@ -626,6 +625,7 @@ section {
   align-items: center;
   text-transform: uppercase;
   font-family: "Aboreto-Regular", sans-serif;
+  padding: 4% 0;
   height: 100%;
   line-height: 1;
   border-radius: 10px;
@@ -714,45 +714,30 @@ section {
 .rsvp .content .rsvp-form .submit-btn:active {
   transform: scale(0.98);
 }
-@media (max-width: 568px) {
-  .rsvp .content .rsvp-form .divider img {
-    max-width: 4.5774647887vw;
-  }
+@media (max-width: 500px) {
   .rsvp .content .rsvp-form .header .title {
-    font-size: 5.2816901408vw;
+    max-width: 56.8vw;
+    font-size: 14vw;
+  }
+  .rsvp .content .rsvp-form .header .title .icon {
+    max-width: 10vw;
   }
   .rsvp .content .rsvp-form .header .subtitle {
-    font-size: 1.9366197183vw;
-  }
-  .rsvp .content .rsvp-form .divider img {
-    max-width: 8.8028169014vw;
-  }
-  .rsvp .content .rsvp-form .button-group .radio-wrapper {
-    height: 5.6338028169vw;
-  }
-  .rsvp .content .rsvp-form .button-group .radio-label {
-    font-size: 2.3943661972vw;
+    font-size: 3.2vw;
   }
   .rsvp .content .rsvp-form .form-group input[type=text],
   .rsvp .content .rsvp-form .form-group input[type=number],
-  .rsvp .content .rsvp-form .form-group textarea,
-  .rsvp .content .rsvp-form .form-group .form-select {
-    font-size: 2.1126760563vw;
-  }
-  .rsvp .content .rsvp-form .form-group .guest-info-title {
-    font-size: 2.6408450704vw;
-  }
-  .rsvp .content .rsvp-form .form-group .wish-label {
-    font-size: 2.4647887324vw;
+  .rsvp .content .rsvp-form .form-group textarea {
+    font-size: 2vw;
   }
   .rsvp .content .rsvp-form .form-group .subtitle {
-    font-size: 2.1126760563vw;
+    font-size: 2.4vw;
   }
-  .rsvp .content .rsvp-form .form-group.dietary p.subtitle {
-    font-size: 2.4647887324vw;
+  .rsvp .content .rsvp-form .form-group .flower1 {
+    max-width: 16.4vw;
   }
   .rsvp .content .rsvp-form .submit-btn {
-    font-size: 2.235915493vw;
+    font-size: 2.8vw;
   }
 }
 
@@ -937,7 +922,7 @@ section {
   font-size: 8px;
   height: 100%;
   line-height: 1.2;
-  border-radius: 10px;
+  border-radius: 8px;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1016,9 +1001,6 @@ section {
   }
   .travel .content .info-table .table-title {
     font-size: 2.6vw;
-  }
-  .travel .content .info-table .table-row {
-    padding: 2.4vw;
   }
 }
 
