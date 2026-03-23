@@ -93,19 +93,23 @@ section {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 90px;
-}
-.music-box .label span {
+  transform-origin: right center;
   position: absolute;
-  right: -23%;
-  width: 105%;
-  font-family: "Almendra-Regular", sans-serif;
+  right: 30%;
+  max-width: 300px;
+  width: 190%;
+  height: 100%;
+  overflow: hidden;
+}
+.music-box .label .musicLabel {
+  width: 100%;
+  text-align: left;
   font-size: 12px;
-  background-color: rgb(100, 137, 130);
-  color: antiquewhite;
-  padding: 3% 5% 5% 20%;
+  background-color: #efc8c8;
+  padding: 4% 15%;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
+  border: 1px solid rgba(48, 44, 42, 0.124);
   opacity: 0.9;
 }
 .music-box .player {
@@ -131,9 +135,9 @@ section {
     bottom: 2vw;
   }
   .music-box .label {
-    width: 18vw;
+    max-width: 60vw;
   }
-  .music-box .label span {
+  .music-box .label .musicLabel {
     font-size: 2.4vw;
   }
   .music-box .player {
@@ -258,7 +262,7 @@ section {
 .hero {
   width: 100%;
   aspect-ratio: 500/724;
-  background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/lanz-yang-ha-my/hero_bg.png") no-repeat center/cover;
+  background-color: #E9E0E0;
 }
 .hero .content {
   width: 100%;
@@ -517,7 +521,7 @@ section {
 }
 .dresscode .content {
   width: 100%;
-  aspect-ratio: 500/625;
+  aspect-ratio: 500/685;
   perspective: 1000px;
   background: url("https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/lanz-yang-ha-my/M.jpg") no-repeat center/cover;
   display: flex;
@@ -529,7 +533,7 @@ section {
   margin: 10% 0 6%;
 }
 .dresscode .content .logo img {
-  max-width: 77px;
+  max-width: 150px;
   width: 100%;
   height: auto;
 }
@@ -554,7 +558,7 @@ section {
 }
 @media (max-width: 500px) {
   .dresscode .content .logo img {
-    max-width: 15.4vw;
+    max-width: 30vw;
   }
   .dresscode .content .text-section {
     max-width: 72.2vw;
@@ -574,7 +578,7 @@ section {
   width: 100%;
   perspective: 1000px;
   position: relative;
-  padding-top: 10%;
+  padding-bottom: 10%;
 }
 .rsvp .content .rsvp-form {
   display: block;
@@ -697,29 +701,6 @@ section {
   right: -5%;
   bottom: 0;
 }
-.rsvp .content .rsvp-form .submit-btn {
-  width: 33%;
-  padding: 2%;
-  line-height: 1;
-  background: #95b1dd;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-weight: 300;
-  font-size: 14px;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background 0.3s ease;
-  margin: 1% 0 10%;
-  font-family: "Aboreto-Regular", sans-serif;
-}
-.rsvp .content .rsvp-form .submit-btn:hover {
-  background: rgb(41, 51, 36);
-  opacity: 0.9;
-}
-.rsvp .content .rsvp-form .submit-btn:active {
-  transform: scale(0.98);
-}
 @media (max-width: 500px) {
   .rsvp .content .rsvp-form .header .title {
     max-width: 56.8vw;
@@ -830,7 +811,10 @@ section {
   height: auto;
 }
 .our-story .content .paragraph.third .text144 {
-  max-width: 209px;
+  position: absolute;
+  bottom: 36%;
+  left: 6%;
+  max-width: 212px;
   width: 100%;
   height: auto;
   position: absolute;
@@ -883,7 +867,7 @@ section {
     max-width: 44vw;
   }
   .our-story .content .paragraph.third .text144 {
-    max-width: 41.8vw;
+    max-width: 42.4vw;
   }
   .our-story .content .paragraph.four .divider img {
     max-width: 5vw;
@@ -1043,6 +1027,29 @@ section {
 }
 .end .content .text p {
   margin-bottom: 5%;
+}
+.end .content .submit-btn {
+  width: 33%;
+  padding: 2%;
+  line-height: 1;
+  background: #95b1dd;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 300;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+  margin: 1% 0 10%;
+  font-family: "Aboreto-Regular", sans-serif;
+}
+.end .content .submit-btn:hover {
+  background: rgb(41, 51, 36);
+  opacity: 0.9;
+}
+.end .content .submit-btn:active {
+  transform: scale(0.98);
 }
 .end .content .end-text {
   font-family: "BigelowRules-Regular", sans-serif;

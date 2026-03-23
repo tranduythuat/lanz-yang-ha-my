@@ -93,7 +93,10 @@
                 }
 
                 .text144 {
-                    max-width: 209px;
+                    position: absolute;
+                    bottom: 36%;
+                    left: 6%;
+                    max-width: 212px;
                     width: 100%;
                     height: auto;
                     position: absolute;
@@ -166,7 +169,7 @@
                     }
 
                     .text144 {
-                        max-width: calc((209 / 500) * 100vw);
+                        max-width: calc((212 / 500) * 100vw);
                     }
                 }
 

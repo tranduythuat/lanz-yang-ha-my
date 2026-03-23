@@ -43,12 +43,34 @@
     const audio = qs("#audio");
     const icon = qs("#iconSvg");
     const btn = qs("#player-btn");
+    const label = qs("#musicLabel");
 
-    if (!audio || !icon || !btn) return;
+    let isOpen = true
+
+    if (!audio || !icon || !btn || !label) return;
+
+    // 👉 GSAP timeline cho label
+    const tl = gsap.timeline({ paused: true });
+
+    tl.to(label, {
+      x: 200,
+      // opacity: 0,
+      duration: 1,
+      ease: "power2.inOut",
+       pointerEvents: "none"
+    });
 
     btn.addEventListener("click", () => {
       if (!audio.src) return;
       audio.paused ? audio.play() : audio.pause();
+
+      // toggle label
+      if (isOpen) {
+        tl.play();
+      } else {
+        tl.reverse();
+      }
+      isOpen = !isOpen;
     });
 
     audio.addEventListener("play", () => icon.classList.add("spin"));
@@ -530,7 +552,7 @@
       didOpen: () => Swal.showLoading(),
     });
 
-    const sheetURL = "https://script.google.com/macros/s/AKfycbzvbEuZRN41vdFafnZab9GJ1lx-2VPpSJpgY5wb6VsWOZZBFPDeATXAX2eGc6WGSld1zA/exec?sheet=nha-trai";
+    const sheetURL = "?sheet=nha-trai";
 
     try {
       const res = await fetch(sheetURL, {

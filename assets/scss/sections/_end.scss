@@ -28,6 +28,31 @@
                 margin-bottom: 5%;
             }
         }
+        .submit-btn {
+            width: 33%;
+            padding: 2%;
+            line-height: 1;
+            background: $title-color;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 300;
+            font-size: 14px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+            margin: 1% 0 10%;
+            font-family: $font-Aboreto-Regular;
+        }
+
+        .submit-btn:hover {
+            background: rgb(41, 51, 36);
+            opacity: 0.9;
+        }
+
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
         .end-text {
             font-family: $font-BigelowRules-Regular;
             font-size: 36px;

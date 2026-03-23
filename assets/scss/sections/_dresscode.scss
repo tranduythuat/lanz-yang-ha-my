@@ -5,7 +5,7 @@
     width: 100%;
     .content {
         width: 100%;
-        aspect-ratio: 500 / 625;
+        aspect-ratio: 500 / 685;
         perspective: 1000px;
         background: url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/lanz-yang-ha-my/M.jpg') no-repeat center / cover;
         display: flex;
@@ -15,7 +15,7 @@
         .logo {
             margin: 10% 0 6%;
             img {
-                max-width: 77px;
+                max-width: 150px;
                 width: 100%;
                 height: auto;
             }
@@ -48,7 +48,7 @@
         .content {
             .logo {
                 img {
-                    max-width: calc((77 / 500) * 100vw);
+                    max-width: calc((150 / 500) * 100vw);
                 }
             }
 
