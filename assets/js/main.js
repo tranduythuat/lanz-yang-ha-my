@@ -499,18 +499,28 @@
 
   async function handleFormSubmit(e, lang = "vi") {
     e.preventDefault();
+console.log('test')
+    const form = document.forms["rsvpForm"];
 
-    const form = e.target;
+    // form.addEventListener("submit", (e) => {
+    //   e.preventDefault();
+
+    //   const data = new FormData(form);
+    //   console.log(Object.fromEntries(data));
+    // });
+    if (!form) {
+      return;
+    }
+
+    // const form = e.target;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
     const {
       name,
       confirm,
-      guest_number,
-      related,
-      phone,
       wish,
+      stay,
     } = data;
 
     // =========================
@@ -552,7 +562,7 @@
       didOpen: () => Swal.showLoading(),
     });
 
-    const sheetURL = "?sheet=nha-trai";
+    const sheetURL = "https://script.google.com/macros/s/AKfycby0mr-qwHA0DMy-8czikwI37R-_-D4grtSeDykUjFD2ZFcf-gqTSucBxTWp1rxt4q0q/exec?sheet=confirm";
 
     try {
       const res = await fetch(sheetURL, {
@@ -561,10 +571,8 @@
         body: new URLSearchParams({
           name,
           confirm,
-          guest_number,
-          related,
-          phone,
           wish,
+          stay,
         }),
       });
 
@@ -609,12 +617,17 @@
   }
 
   function initRSVP() {
-    const form = document.forms["rsvpForm"];
-    if (form) {
-      form.addEventListener("submit", (e) => handleFormSubmit(e, "vi"));
+    // if (form) {
+    //   form.addEventListener("submit", (e) => handleFormSubmit(e, "vi"));
+    // }
+    const submitBtn = qs('#submit-btn');
+    if (submitBtn) {
+      submitBtn.addEventListener('click', (e) => {
+        handleFormSubmit(e, "en")
+      })
     }
   }
-
+  
   function initAnimations() {
     const animationMap = {
       "flip": gsapFlipIn,
