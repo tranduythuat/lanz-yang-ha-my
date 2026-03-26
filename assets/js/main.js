@@ -499,7 +499,6 @@
 
   async function handleFormSubmit(e, lang = "vi") {
     e.preventDefault();
-console.log('test')
     const form = document.forms["rsvpForm"];
 
     // form.addEventListener("submit", (e) => {
@@ -617,14 +616,9 @@ console.log('test')
   }
 
   function initRSVP() {
-    // if (form) {
-    //   form.addEventListener("submit", (e) => handleFormSubmit(e, "vi"));
-    // }
-    const submitBtn = qs('#submit-btn');
-    if (submitBtn) {
-      submitBtn.addEventListener('click', (e) => {
-        handleFormSubmit(e, "en")
-      })
+    const form = document.forms["rsvpForm"];
+    if (form) {
+      form.addEventListener("submit", (e) => handleFormSubmit(e, "en"));
     }
   }
   
